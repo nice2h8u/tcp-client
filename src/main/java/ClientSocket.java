@@ -17,6 +17,7 @@ public class ClientSocket {
 
             System.out.println("Just connected to " + socket.getRemoteSocketAddress());
 
+
             BufferedReader fromServer =
                     new BufferedReader(
                             new InputStreamReader(socket.getInputStream()));
@@ -26,7 +27,7 @@ public class ClientSocket {
             for (int i=0;i<2;i++) {
 
 
-                toServer.println(json.toString());
+                toServer.println("{\"id\":4,\"word\":\"sing\",\"description\":[\"subscriber\"]}");
 
 
                 //toServer.println("Hello 2 " );
